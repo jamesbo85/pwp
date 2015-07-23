@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<title>Personal Website Project</title>
 	</head>
 	<body class=".pwpbackgroundpattern">
