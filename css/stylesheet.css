@@ -1,0 +1,7 @@
+	.pwpbackgroundpattern {
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-image: url("../images/mainbackground.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+	}
