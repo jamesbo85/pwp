@@ -5,8 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<title>Personal Website Project</title>
 	</head>
-	<body class=".pwpbackgroundpattern">
-		<div>
+	<body>
+		<div class="pwpbackgroundpattern">
 			<header>
 				<h1>Personal Website Project</h1>
 			</header>

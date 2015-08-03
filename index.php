@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 		<title>Personal Website Project</title>
 	</head>
-	<body class=".pwpbackgroundpattern">
+	<body class="pwpbackgroundpattern">
 		<div>
 			<header>
 				<h1>Personal Website Project</h1>

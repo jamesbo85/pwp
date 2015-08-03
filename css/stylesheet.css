@@ -1,7 +1,13 @@
-	.pwpbackgroundpattern {
-		background-repeat: no-repeat;
-		background-position: top center;
-		background-image: url("../images/mainbackground.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-	}
+header{
+	display: block;
+	background: rgba(4, 10, 64, 0.5);
+	text-align: center;
+	color: rgb(19, 32, 255);
+}
+.pwpbackgroundpattern {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url("../images/granitebg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
