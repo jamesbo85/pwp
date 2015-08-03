@@ -20,13 +20,13 @@
 				</div>
 				<div>
 					<h2>PERSONA</h2>
-					<img src="http://theballstonjournal.com/wp-content/uploads/2015/06/iu-6.jpg">
+					<img src="http://theballstonjournal.com/wp-content/uploads/2015/06/iu-6.jpg" alt="bill gates photo">
 					<h3>Names:</h3>
 					<p>Billy Gates</p>
 					<h3>Age:</h3>
 					<p>59</p>
 					<h3>Profession:</h3>
-					<p>Founder of a little known company names Microsoft, and co-founder of the Bill and Milinda Gates Foundation.
+					<p>Founder of a little known company named Microsoft, and co-founder of the Bill and Milinda Gates Foundation.
 					General smart guy, philantropist, author, and rich guy.</p>
 					<h3>Technology:</h3>
 					<p>Windows, Windows, Windows phone, and Windows</p>
