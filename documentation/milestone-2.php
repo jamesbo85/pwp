@@ -26,7 +26,7 @@
 					<h3>Age:</h3>
 					<p>59</p>
 					<h3>Profession:</h3>
-					<p>Founder of a little known company named Microsoft, and co-founder of the Bill and Milinda Gates Foundation.
+					<p>Founder of a little known company named Microsoft, and co-founder of the Bill and Melinda Gates Foundation.
 					General smart guy, philantropist, author, and rich guy.</p>
 					<h3>Technology:</h3>
 					<p>Windows, Windows, Windows phone, and Windows</p>
