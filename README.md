@@ -9,6 +9,6 @@ Great job on Milestone 1 - everything is complete and meets expectations. Your c
 Not seeing Milestone 3 on GitHub in your pwp repository. Great job on Milestone 3. Your M.S. passes at Tier III. 
  
 ##Suggestions
-- Explore gallery plugins. [Swipebox]("http://brutaldesign.github.io/swipebox/")
-- Take a look at Bootstrap's [Carousel]("http://getbootstrap.com/javascript/#carousel"), and [Navbar]("http://getbootstrap.com/components/#navbar").
+- Explore gallery plugins. [Swipebox](http://brutaldesign.github.io/swipebox/)
+- Take a look at Bootstrap's [Carousel](http://getbootstrap.com/javascript/#carousel), and [Navbar](http://getbootstrap.com/components/#navbar).
 - Look into CSS3 animation effects for your hover states
