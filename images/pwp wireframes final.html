@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://wireframe.cc/bD4r0T# -->
+<html lang="en" class="wf-lato-i4-active wf-lato-i7-active wf-lato-n4-active wf-lato-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8"><script type="text/javascript" defer="" async="" src="https://wireframe.cc/piwik//piwik.js"></script><script type="text/javascript" async="" src="./pwp wireframes final_files/amplitude-2.2.0-min.gz.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwEHWFJTGwcIVlhXDwY="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><style>#content > #right > .dose > .dosesingle,
+#content > #center > .dose > .dosesingle
+{display:none !important;}</style>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta name="Robots" content="index follow">
+<title>wireframe.cc - minimal wireframing tool - for free</title>
+<link rel="stylesheet" href="./pwp wireframes final_files/normalize.css" type="text/css">
+<link rel="stylesheet" href="./pwp wireframes final_files/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="./pwp wireframes final_files/style.2.3.98.min.css" type="text/css">
+<link rel="stylesheet" href="./pwp wireframes final_files/fontello.css" type="text/css">
+<!-- <link rel="stylesheet" href="css/fontello.css"> -->
+<script src="./pwp wireframes final_files/jquery.min.js"></script>
+<script src="./pwp wireframes final_files/jquery-ui.1.7.2.4.min.js"></script>
+<script src="./pwp wireframes final_files/touch.js"></script>
+<script src="./pwp wireframes final_files/jquery.editnibble.js"></script>
+<script src="./pwp wireframes final_files/jquery.autosize.js"></script>
+<link rel="stylesheet" href="https://use.edgefonts.net/c/7ac18c/1w;lato,2,c0s:W:i4,c0y:W:i7,c0r:W:n4,c0x:W:n7/d" media="all"><script src="./pwp wireframes final_files/lato.js"></script>
+<style type="text/css">@import "jquery-svg/jquery.svg.css";</style> 
+<script type="text/javascript" src="./pwp wireframes final_files/jquery.svg.js"></script>
+<script type="text/javascript" src="./pwp wireframes final_files/jquery.svgdom.js"></script>
+<script type="text/javascript" src="./pwp wireframes final_files/jquery-collision.min.js"></script>
+<script type="text/javascript" src="./pwp wireframes final_files/jquery.contextMenu.v1.js"></script>
+<script type="text/javascript" src="./pwp wireframes final_files/apprise-1.5.full.js"></script>
+<link rel="stylesheet" href="https://wireframe.cc/jquery.contextMenu.css">
+<script src="./pwp wireframes final_files/keymaster.js"></script>
+<script src="./pwp wireframes final_files/jquery.transit.min.js"></script>
+<link href="https://wireframe.cc/chardinjs.css" rel="stylesheet">
+<script src="./pwp wireframes final_files/chardinjs.js"></script>
+
+<script type="text/javascript">
+  (function(e,t){var r=e.amplitude||{};var n=t.createElement("script");n.type="text/javascript";
+  n.async=true;n.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.2.0-min.gz.js";
+  var s=t.getElementsByTagName("script")[0];s.parentNode.insertBefore(n,s);r._q=[];
+  function a(e){r[e]=function(){r._q.push([e].concat(Array.prototype.slice.call(arguments,0)));
+  }}var i=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties"];
+  for(var o=0;o<i.length;o++){a(i[o])}e.amplitude=r})(window,document);
+
+  amplitude.init("2ab562049cb052295cac5da26f465406");
+</script>
+
+</head>
+
+
+<body style="cursor: auto;">
+
+
+  <div class="container">
+    <span class="whatsnew"><i class="icon-flag"></i>What's new?</span>
+    <div id="top">
+      <div class="left topico device-wrap" data-intro="More templates" data-position="bottom" original-title="">
+
+        <span class="device-window" original-title="Template: browser"><i class="icon-window"></i></span>
+        <span class="device-tablet" original-title="Template: tablet"><i class="icon-tablet"></i></span>
+        <span class="device-mobile" original-title="Template: mobile"><i class="icon-mobile"></i></span>
+        <span class="device-mobile-landscp" original-title="Template: mobile (landscape)"><i class="icon-mobile"></i></span>
+      </div>
+      <div id="logo" class="left" style="padding:0;" original-title="">
+        <a href="http://wireframe.cc/" target="_blank">wireframe<span style="color: tomato;">|</span>cc</a>
+
+      </div>
+
+      <div id="slogan" class="left" style="display: none;" original-title="">
+        <span><h1>Super simple way to wireframe</h1></span>
+        <span id="watch-demo" class="withlabel save">Watch demo <i class="icon-play-circle"></i></span>
+        <a href="https://wireframe.cc/example"><span id="example" class="withlabel topicon">See example <i class="icon-search"></i></span></a>
+        <span class="orstart withlabel single-icon ">Start drawing<i class="icon-login"></i></span>
+
+      </div>
+
+      <div class="controls" style="display: block;">
+        <div class="left " original-title="">
+          <div id="undo" class="topicon left" original-title="Undo (Ctrl+Z)"><span><i class="icon-reply"></i></span><p>undo</p></div>
+          <div id="redo" class="topicon left" original-title="Redo (Ctrl+Y)"><span><i class="icon-share-alt"></i></span><p>redo</p></div>
+        </div>
+        <div class="left copypaste" data-intro="Copy / paste between wireframes &lt;span class=&#39;better&#39;&gt;Better&lt;/span&gt;" data-position="bottom" original-title="">
+          <div id="copy" class="topicon left" original-title="Copy selected elements (Ctrl+C)"><span><i class="icon-copy"></i></span><p>copy</p></div>
+          <div id="cut" class="topicon left" original-title="Cut selected elements (Ctrl+X)"><span><i class="icon-cut"></i></span><p>cut</p></div>
+          <div id="paste" class="topicon left" original-title="Paste selected elements (Ctrl+V)"><span><i class="icon-paste"></i></span><p>paste</p></div>
+          <div id="del" class="topicon left" original-title="Delete selected elements (Del/Backspace)"><span><i class="icon-remove"></i></span><p>delete</p></div>
+        </div>
+        <div class="left" data-intro="Aligning and grouping &lt;span class=&#39;intronew&#39;&gt;New&lt;/span&gt;" data-position="bottom" original-title="">
+          <div id="lock" class="topicon left" original-title="Lock / unlock selected element (Ctrl+L)"><span class="icon-lock"></span></div>
+
+          <div id="arrange" class="topicon left" original-title="Arrange elements"><span><i class="arrange-icon custom-icon"></i></span></div>
+
+          <span id="arrange-icons" class="">
+<div id="front" class="topicon inner-btn left" original-title="Bring to front">
+              <span><i class="front-icon custom-icon"></i></span>
+            </div><div id="forward" class="topicon inner-btn left" original-title="Bring forward">
+            <span><i class="forward-icon custom-icon"></i></span>
+          </div>
+          <div id="back" class="topicon inner-btn left" original-title="Send to back">
+            <span><i class="back-icon custom-icon"></i></span>
+          </div>
+          <div id="backward" class="topicon inner-btn left" original-title="Send backward">
+            <span><i class="backward-icon custom-icon"></i></span>
+          </div>
+        </span>
+
+        <div id="align" class="topicon left" original-title="Align elements"><span><i class="group-align custom-icon"></i></span><p>Align</p></div>
+
+        <span class="align-icons">
+          <div id="align-top" class="topicon inner-btn left" original-title="Align Top"><span><i class="align-icon align-top custom-icon"></i></span><p>Align Top</p></div>
+          <div id="align-left" class="topicon inner-btn left" original-title="Align Left"><span><i class="align-left  custom-icon"></i></span><p>Align Left</p></div>
+          <div id="align-bottom" class="topicon inner-btn left" original-title="Align Bottom"><span><i class=" align-icon align-bottom custom-icon"></i></span><p>Align Bottom</p></div>
+          <div id="align-right" class="topicon inner-btn left" original-title="Align Right"><span><i class="align-right align-icon  custom-icon"></i></span><p>Align Right</p></div>
+
+          <div id="align-center" class="topicon inner-btn left" original-title="Align Center"><span><i class=" align-icon align-center custom-icon"></i></span><p>Align Center</p></div>
+          <div id="align-middle" class="topicon inner-btn left" original-title="Align Middle"><span><i class="align-icon align-middle custom-icon"></i></span><p>Align Middle</p></div>
+          <div id="dist-v" class="topicon inner-btn left" original-title="Distribute Vertically"><span><i class="align-icon dist-v custom-icon"></i></span><p>Distribute Vertically</p></div>
+          <div id="dist-h" class="topicon inner-btn left" original-title="Distribute Horizontally"><span><i class="align-icon dist-h custom-icon"></i></span><p>Distribute Horizontally</p></div>
+        </span>
+
+        <div id="group" class="topicon left" original-title="Group elements"><span><i class="group-icon custom-icon"></i></span></div>
+      </div>
+
+
+    </div><!-- controls end -->
+
+
+    <div id="gopro"><a href="https://wireframe.cc/premium.html" target="_blank"><i class="icon-arrow-right"></i>Go Premium</a></div>
+
+    <div id="links" class="transit linksmin">
+      <div class="linksdown "><span><i class="icon-menu"></i></span></div>
+      <div class="linksdownwrap">       
+        <div class="linkwrap transit"><a href="https://wireframe.cc/pro/login.php">login</a></div></div>  
+        <div class="linkwrap transit"><a target="_blank" href="https://wireframe.cc/contact">contact</a></div>
+        <div class="linkwrap transit about"><a href="https://wireframe.cc/bD4r0T#about">about</a></div>
+
+      </div>
+
+      <div class="settings topicon single-icon right controls" style="display: block;"><span><i class="icon-cogs icon-arrow-right"></i></span><p>settings</p></div>
+      <div class="topicon right withlabel  controls single-icon" id="savefree" title="Save" data-intro=" SSL encryption" data-position="bottom" style="display: block;"><span><i class="icon-floppy"></i></span><p>Save</p></div>
+      <span class="right controls" style="display: inline;">
+        <div id="hide-annotation" class="topicon left single-icon" original-title="Hide annotations"><span><i class="icon-comment"></i></span></div>
+      </span>
+      <span class="right controls" style="display: inline;">
+        <div id="show-annotation" class="topicon left single-icon" style="display:none;" original-title="Show annotations"><span><i class="icon-comment-alt"></i></span></div>
+      </span>
+      
+    </div>
+
+    <div class="options">
+      <div class="optitem" data-intro="New grid types" data-position="bottom">
+        Grid type
+        <label class="dropdown">
+          <select id="grid-type">
+            <option selected="" value="graph">Graph paper</option>
+            <option value="dots">Dots</option>
+            <option value="col">Columns</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="optitem check "><input type="checkbox" name="check" id="show-grid" checked="yes"><label for="show-grid"></label> <span>Show grid</span></div>
+      <div class="optitem check "><input type="checkbox" name="check" id="snap-to-grid"><label for="snap-to-grid"></label> <span>Snap to grid</span></div>
+      <div class="optitem "> Grid size: <span class="grid-size-val">20</span>px</div>
+      <div id="grid-slider-wrap " class="optitem">
+        <div id="grid-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a href="./pwp wireframes final_files/pwp wireframes final.html" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 25%;"></a></div>
+      </div>
+      <div class="optitem">
+        Default stroke:<br>
+        <label class="dropdown">
+          <select id="def-stroke-width">
+            <option value="1">Thin</option>
+            <option selected="" value="2">Medium</option>
+            <option value="4">Thick</option>
+          </select>
+        </label>
+        <label class="dropdown">
+          <select id="def-stroke-color">
+            <option value="transparent">Transparent</option>
+            <option value="rgb(255,255,255)">white</option>
+            <option value="rgb(221,221,221)">#ddd</option>
+            <option value="rgb(170,170,170)">#aaa</option>
+            <option value="rgb(119,119,119)">#777</option>
+            <option selected="" value="rgb(68,68,68)">#444</option>
+            <option value="rgb(17,17,17)">#111</option>
+            <option value="tomato">tomato</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="optitem">
+        Default fill color
+        <label class="dropdown">
+          <select id="def-bg-color">
+            <option value="transparent">Transparent</option>
+            <option selected="" value="rgb(255,255,255)">white</option>
+            <option value="rgb(221,221,221)">#ddd</option>
+            <option value="rgb(170,170,170)">#aaa</option>
+            <option value="rgb(119,119,119)">#777</option>
+            <option value="rgb(68,68,68)">#444</option>
+            <option value="rgb(17,17,17)">#111</option>
+            <option value="tomato">tomato</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="optitem">
+        Canvas size:
+        <input type="text" id="canvas_w_val" class="input">/
+        <input type="text" id="canvas_h_val" class="input"> 
+        px
+      </div>
+    </div>
+
+    <div class="save-wrap" style="display: none;">
+      <span>Wireframe saved as:</span>
+      <span class="savedURL">http://wireframe.cc/bD4r0T</span>
+    </div>
+    <div class="saved" style="display: none;">Saved</div><div class="copied">Copied</div>
+    <div class="supercanvas ui-boxer"><div id="canvas-wrap" class="browser-wrap ui-draggable ui-resizable" snappy="0" data-grid="graph" style="left: 171px; margin-left: 0px; top: 120px;"><span id="browser"><span> </span></span>
+<div id="canvas"><div id="gridcol"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+</div><div id="grid-dot" style="width:100%;height:100%;overflow:hidden;"><svg id="svg-grid" zoomAndPan="disable" currentscale="2" xmlns="http://www.w3.org/2000/svg" version="1.2" width="3000" height="12000"><pattern id="dot-pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><g id="sharp"><circle class="svgdot" cx="19.5" cy="19.5" r="0.5" stroke="#666" style="fill: none;"></circle></g></pattern><rect id="grid" fill="url(#dot-pattern)" width="3000" height="12000"></rect></svg></div><div id="grid-div" style="width:100%;height:100%;overflow:hidden;"><svg id="svg-grid" zoomAndPan="disable" currentscale="2" xmlns="http://www.w3.org/2000/svg" version="1.2" width="3000" height="12000"><pattern id="grid-pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><g id="sharp" transform="translate(-0.5,-0.5)"><line class="lineH" x1="0" x2="100" y1="20" y2="20" stroke="#eee" stroke-width="1"></line><line class="lineH" x1="0" x2="100" y1="40" y2="40" stroke="#eee" stroke-width="1"></line><line class="lineH" x1="0" x2="100" y1="60" y2="60" stroke="#eee" stroke-width="1"></line><line class="lineH" x1="0" x2="100" y1="80" y2="80" stroke="#eee" stroke-width="1"></line><line class="lineV" x1="20" x2="20" y1="0" y2="100" stroke="#eee" stroke-width="1"></line><line class="lineV" x1="40" x2="40" y1="0" y2="100" stroke="#eee" stroke-width="1"></line><line class="lineV" x1="60" x2="60" y1="0" y2="100" stroke="#eee" stroke-width="1"></line><line class="lineV" x1="80" x2="80" y1="0" y2="100" stroke="#eee" stroke-width="1"></line><line class="lineV" x1="100" x2="100" y1="0" y2="100" stroke="#e1e1e1" stroke-width="1"></line><line class="lineH" x1="0" x2="100" y1="100" y2="100" stroke="#e1e1e1" stroke-width="1"></line></g></pattern><rect id="grid" fill="url(#grid-pattern)" width="3000" height="12000"></rect></svg></div><div id="guide-h" class="guide" style="top: 507px; display: none;"></div><div id="guide-v" class="guide" style="left: 570px; display: none;"></div><div class="wire hastext ui-draggable ui-resizable ui-resizable-autohide" id="w1439235273144" style="top: 9px; left: 45px; width: 300px; height: 64px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 3; font-size: 28px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">James Huber's Portfolio</div></span></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="10024" style="position: absolute; top: 270px; left: 140px; width: 101px; height: 52px; z-index: 96;"><div style="position:relative; top:-353px; left:-127px;"><div class="wire ui-resizable-autohide groupmember" id="w14392354585060" style="top: 353px; left: 127px; width: 98px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 5; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w14392356821250" style="top: 363px; left: 127px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 14; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript contact button</div></span></div></div></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="25807" style="position: absolute; top: 173px; left: 54px; width: 101px; height: 52px; z-index: 94;"><div style="position:relative; top:-217px; left:-28px;"><div class="wire ui-resizable-autohide groupmember" id="w14392354596360" style="top: 217px; left: 28px; width: 98px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 7; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w1439235583206" style="top: 226px; left: 28px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 11; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript about me button</div></span></div></div></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="23223" style="position: absolute; top: 173px; left: 224px; width: 102px; height: 52px; z-index: 92;"><div style="position:relative; top:-217px; left:-209px;"><div class="wire ui-resizable-autohide groupmember" id="w14392354813720" style="top: 217px; left: 209px; width: 100px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 10; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w14392356810840" style="top: 226px; left: 210px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 12; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript porfolio button</div></span></div></div></div></div><div class="wire hastext ui-draggable ui-resizable ui-resizable-autohide" id="w1439235782906" style="top: 372px; left: 79px; width: 230px; height: 42px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 15; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">Launch page wireframe</div></span></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="97475" style="position: absolute; top: 0px; left: 402px; width: 211px; height: 271px; z-index: 90;"><div style="position:relative; top:-0px; left:-374px;"><div class="wire ui-resizable-autohide groupmember" id="w1439236605675" style="top: 0px; left: 374px; width: 209px; height: 261px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new box"></div></div><div class="wire ui-resizable-autohide groupmember" id="w1439236612523" style="top: 9px; left: 390px; width: 181px; height: 39px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new headline"><span class="headtext"><span style="background: rgb(68, 68, 68);">Lorem</span> <span style="background: rgb(68, 68, 68);">ipsum</span> <span style="background: rgb(68, 68, 68);">dolor</span> <span style="background: rgb(68, 68, 68);">sitammet</span> <span style="background: rgb(68, 68, 68);">quam</span> <span style="background: rgb(68, 68, 68);">Lorem</span> <span style="background: rgb(68, 68, 68);">ipsumdolor</span> <span style="background: rgb(68, 68, 68);">sitammet</span> <span style="background: rgb(68, 68, 68);">quam</span></span></div></div><div class="wire ui-resizable-autohide groupmember" id="w14392366350920" style="top: 232px; left: 390px; width: 181px; height: 21px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new headline"><span class="headtext"><span style="background: rgb(68, 68, 68);">Lorem</span> <span style="background: rgb(68, 68, 68);">ipsum</span> <span style="background: rgb(68, 68, 68);">dolor</span> <span style="background: rgb(68, 68, 68);">sitammet</span> <span style="background: rgb(68, 68, 68);">quam</span> <span style="background: rgb(68, 68, 68);">Lorem</span> <span style="background: rgb(68, 68, 68);">ipsumdolor</span> <span style="background: rgb(68, 68, 68);">sitammet</span> <span style="background: rgb(68, 68, 68);">quam</span></span></div></div><div class="wire ui-resizable-autohide groupmember" id="w14392366765470" style="top: 70px; left: 484px; width: 87px; height: 135px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="85" height="133"><line x1="0" y1="133" x2="85" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="85" y2="133" class="line2" stroke="#444" stroke-width="1"></line></svg></div></div><div class="wire ui-resizable-autohide groupmember" id="w14392366802640" style="top: 70px; left: 390px; width: 87px; height: 135px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="85" height="133"><line x1="0" y1="133" x2="85" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="85" y2="133" class="line2" stroke="#444" stroke-width="1"></line></svg></div></div><div class="wire ui-resizable-autohide groupmember" id="w1439236668444" style="top: 60px; left: 437px; width: 87px; height: 135px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="85" height="133"><line x1="0" y1="133" x2="85" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="85" y2="133" class="line2" stroke="#444" stroke-width="1"></line></svg></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w1439236815100" style="top: 97px; left: 374px; width: 209px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; font-size: 12px; width: 209px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">Rotating screenshots with hover over text</div></span></div></div><div class="wire ui-resizable-autohide groupmember" id="w1439236878504" style="top: 219px; left: 424px; width: 101px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 87; background: white;" class="wirejr new slider2"><span style="background: rgb(68, 68, 68);"></span></div></div></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w14392384560630" style="top: 266px; left: 402px; width: 209px; height: 261px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 88; background: white;" class="wirejr new box"></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w1439235828258" style="top: 0px; left: 614px; width: 400px; height: 497px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new box"></div><div class="ui-resizable-handle ui-resizable-n" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w1439236042792" style="top: 9px; left: 614px; width: 391px; height: 78px; position: absolute; z-index: auto;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new headline"><span class="headtext" style="text-align: center;"><span style="text-align: center; background: rgb(68, 68, 68);">Lorem</span> <span style="text-align: center; background: rgb(68, 68, 68);">ipsum</span> <span style="text-align: center; background: rgb(68, 68, 68);">dolor</span> <span style="text-align: center; background: rgb(68, 68, 68);">sitammet</span> <span style="text-align: center; background: rgb(68, 68, 68);">quam</span> <span style="text-align: center; background: rgb(68, 68, 68);">Lorem</span> <span style="text-align: center; background: rgb(68, 68, 68);">ipsumdolor</span> <span style="text-align: center; background: rgb(68, 68, 68);">sitammet</span> <span style="text-align: center; background: rgb(68, 68, 68);">quam</span></span></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w14392361085330" style="top: 430px; left: 631px; width: 391px; height: 78px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new headline"><span class="headtext" style="text-align: center;"><span style="text-align: center; background: rgb(68, 68, 68);">Lorem</span> <span style="text-align: center; background: rgb(68, 68, 68);">ipsum</span> <span style="text-align: center; background: rgb(68, 68, 68);">dolor</span> <span style="text-align: center; background: rgb(68, 68, 68);">sitammet</span> <span style="text-align: center; background: rgb(68, 68, 68);">quam</span> <span style="text-align: center; background: rgb(68, 68, 68);">Lorem</span> <span style="text-align: center; background: rgb(68, 68, 68);">ipsumdolor</span> <span style="text-align: center; background: rgb(68, 68, 68);">sitammet</span> <span style="text-align: center; background: rgb(68, 68, 68);">quam</span></span></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w1439236439151" style="top: 72px; left: 914px; width: 91px; height: 342px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new box"></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-resizable-autohide" id="w14392364868860" style="top: 98px; left: 821px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div></div><div class="wire ui-resizable-autohide ui-draggable ui-resizable" id="w14392364875930" style="top: 98px; left: 725px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w14392364881210" style="top: 98px; left: 629px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-resizable-autohide ui-draggable ui-resizable" id="w14392365004280" style="top: 204px; left: 725px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w14392365011090" style="top: 317px; left: 631px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable ui-resizable-autohide" id="w14392365016130" style="top: 204px; left: 629px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-resizable-autohide ui-draggable ui-resizable" id="w14392365185790" style="top: 204px; left: 821px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire ui-resizable-autohide" id="w14392365227230" style="top: 317px; left: 821px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div></div><div class="wire ui-resizable-autohide ui-draggable ui-resizable" id="w14392365234200" style="top: 317px; left: 727px; width: 83px; height: 86px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; background: white;" class="wirejr new image hasSVG"><svg version="1.1" width="81" height="84"><line x1="0" y1="84" x2="81" y2="0" class="line1" stroke="#444" stroke-width="1"></line><line x1="0" y1="0" x2="81" y2="84" class="line2" stroke="#444" stroke-width="1"></line></svg></div><div class="ui-resizable-handle ui-resizable-n" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: none;" unselectable="on"></div></div><div class="wire hastext ui-draggable ui-resizable ui-resizable-autohide" id="w1439236539929" style="top: 57px; left: 631px; width: 293px; height: 42px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 85; width: 294px; background: white;" class="wirejr new headlinetxt textnew"><span class="text"><div class="textme">Portforlio screenshots w/ hoover text over and links</div></span></div><div class="ui-resizable-handle ui-resizable-e" style="display: none;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: none;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable" id="w14392384707800" style="top: 0px; left: 0px; width: 400px; height: 497px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 1; background: white;" class="wirejr new box"></div><div class="ui-resizable-handle ui-resizable-n" style="display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" style="display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" style="display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" style="display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000001; display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000002; display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000003; display: block;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000004; display: block;" unselectable="on"></div></div><div class="wire ui-draggable ui-resizable hastext ui-resizable-autohide" id="w1439238577149" style="top: 430px; left: 116px; width: 146px; height: 42px; z-index: auto; position: absolute;"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 97; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">responsive background Img</div></span></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on" style="display: none;"></div></div><div class="wire hastext ui-draggable ui-resizable ui-resizable-autohide" id="w14392386878990" style="top: 270px; left: 359px; width: 300px; height: 14px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 98; font-size: 12px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">James Huber's Portfolio</div></span></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on" style="display: none;"></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="w14392387169140" style="position: absolute; top: 300px; left: 455px; width: 101px; height: 52px; z-index: 99;"><div style="position:relative; top:-217px; left:-28px;"><div class="wire ui-resizable-autohide groupmember" id="w14392387169150" style="top: 217px; left: 28px; width: 98px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 7; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w14392387169151" style="top: 226px; left: 28px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 11; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript about me button</div></span></div></div></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="w14392387251770" style="position: absolute; top: 360px; left: 455px; width: 102px; height: 52px; z-index: 100;"><div style="position:relative; top:-217px; left:-209px;"><div class="wire ui-resizable-autohide groupmember" id="w14392387251770" style="top: 217px; left: 209px; width: 100px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 10; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w14392387251771" style="top: 226px; left: 210px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 12; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript porfolio button</div></span></div></div></div></div><div class="grouped wire ui-draggable ui-resizable-autohide" id="w14392387342680" style="position: absolute; top: 418px; left: 455px; width: 101px; height: 52px; z-index: 101;"><div style="position:relative; top:-353px; left:-127px;"><div class="wire ui-resizable-autohide groupmember" id="w14392387342680" style="top: 353px; left: 127px; width: 98px; height: 50px; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 5; left: 195px; top: 53px; background: white;" class="wirejr new roundbox"></div></div><div class="wire hastext ui-resizable-autohide groupmember" id="w14392387342681" style="top: 363px; left: 127px; width: 99px; height: 28px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 14; font-size: 12px; width: 98px; background: white;" class="wirejr new headlinetxt textnew"><span class="text" style="text-align: center;"><div class="textme">JavaScript contact button</div></span></div></div></div></div><div class="wire ui-draggable ui-resizable hastext ui-resizable-autohide" id="w1439238751392" style="top: 494px; left: 448px; width: 123px; height: 14px; z-index: auto; position: absolute;" aria-disabled="false"><div style="border-width: 1px; border-color: rgb(68, 68, 68); color: rgb(68, 68, 68); z-index: 102; font-size: 12px; background: white;" class="wirejr new headlinetxt textnew"><span class="text"><div class="textme">social media links</div></span></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on" style="display: none;"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on" style="display: none;"></div></div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se icon-resize-full" style="z-index: 1000001;" unselectable="on"></div></div></div>
+  
+      <!-- ///wirepanel START -->
+
+      <div id="wirepanel" class="wirepanel" style="top: 554px; left: 476px; display: none;">
+        <!-- <div id='edit' class='highlightable'title='Change stencil type'><i class="icon-magic" ></i></div> -->
+        <div id="edittxt" class="highlightable" original-title="Edit text" style="display: block;"><i class="icon-pencil"></i></div>
+        <!-- <div id='lock' class='highlightable' title='Lock'><i class="icon-lock" ></i></div> -->
+        <!-- <div id='unlock' class='highlightable' title='Unlock'><i class="icon-unlock" ></i></div> -->
+
+        <div id="icons" style="display: none;">
+
+          <div class="icon rect horizontal vertical highlightable" elementtype="box" original-title="Box"></div>
+          <div class="icon rect horizontal vertical highlightable" elementtype="roundbox" original-title="Rounded Box"></div>
+          <div class="icon rect highlightable" elementtype="elipse" original-title="Ellipse/Circle" style="display: block;"></div>
+          <div class="icon rect highlightable" elementtype="image" original-title="Image" style="display: block;"><i class="icon-picture"></i></div>
+          <div class="icon rect highlightable" elementtype="paragraph" original-title="Paragraph" style="display: block;"><i class="icon-align-left"></i></div>
+          <div class="icon rect highlightable" elementtype="list" original-title="List" style="display: block;"><i class="icon-list"></i></div>
+          <div class="icon highlightable" elementtype="radiobtn" original-title="Radio button" style="display: none;"></div>
+          <div class="icon highlightable" elementtype="checkbox" original-title="Checkbox" style="display: none;"></div>
+          <div class="icon horizontal highlightable" elementtype="line_hor" original-title="Line" style="display: none;"></div>
+          <div class="icon vertical highlightable" elementtype="line_vert" original-title="Line" style="display: none;"></div>
+          <div class="icon horizontal highlightable" elementtype="slider" original-title="Slider" style="display: none;"></div>
+          <div class="icon horizontal highlightable" elementtype="progressbar" original-title="Progress bar" style="display: none;"></div>
+
+          <div class="icon horizontal highlightable" elementtype="combobox" original-title="Combo box" style="display: none;"> <i class="icon-caret-down"></i> </div>
+          <div class="icon horizontal highlightable" elementtype="scrollh" original-title="Scrollbar (horizontal)" style="display: none;"> <i class="icon-caret-left" style="position:absolute;left:-5px;"></i> <i class="icon-caret-right" style="position:absolute;left:3px;"></i></div>
+          <div class="icon vertical highlightable" elementtype="scrollv" original-title="Scrollbar (vertical)" style="display: none;"> <i class="icon-caret-up" style="position:absolute;top:-5px;"></i> <i class="icon-caret-down" style="position:absolute;top:3px;"></i></div>
+          <div class="icon rect horizontal highlightable" elementtype="headline" original-title="Headline" style="display: block;">H</div>
+          <div class="icon rect horizontal highlightable" elementtype="headlinetxt" original-title="Text" style="display: block;">T</div>
+          <div id="textinput" class="icon horizontal rect highlightable" elementtype="textinput" original-title="Text input" style="display: block;"></div>
+          <div id="annotate" class="icon horizontal rect vertical highlightable" elementtype="annotate" style="margin-top: -2px; display: block;" original-title="Add annotation"><i class="icon-comments-alt"></i></div>
+        </div>
+
+        
+
+        <div id="strokes" style="display: none;">
+          <div class="stroke_width strokeweight highlightable" stroke="1" original-title="Stroke width: thin"><span class="line onepx "></span></div>
+          <div class="stroke_width strokeweight highlightable" stroke="2" original-title="Stroke width: medium"><span class="line twopx "></span></div>
+          <div class="stroke_width strokeweight highlightable" stroke="4" original-title="Stroke width: thick"><span class="line fourpx "></span></div>
+        </div>
+
+        <div id="textalign" style="display: block;">
+          <div id="alignleft" class="highlightable"><i class="icon-align-left" title="Align left"></i></div>
+          <div id="aligncenter" class="highlightable"><i class="icon-align-center" title="Center"></i></div>
+          <div id="alignright" class="highlightable"><i class="icon-align-right" title="Aligne right"></i></div>
+          <div id="alignjustify" class="highlightable"><i class="icon-align-justify" title="Justify"></i></div>
+        </div>
+        <div id="textsize" style="display: block;">
+          <div id="font-s" class="highlightable" style="font-size:10px;margin-top:8px;" title="Small font"><i class="icon-font"></i></div>
+          <div id="font-m" class="highlightable" style="font-size:14px;margin-top:4px;" title="Medium font"><i class="icon-font"></i></div>
+          <div id="font-l" class="highlightable" style="font-size:18px;" title="Large font"><i class="icon-font"></i></div>
+        </div>
+        <div style="display: block;">
+
+
+          <div id="show-border" class="highlightable" original-title="Change to fill color" style="display: none;">
+            <span></span>
+          </div>
+          <div id="show-bg" style="display:none;" class="highlightable" original-title="Change to background color">
+            <span></span>
+          </div>
+
+
+
+
+
+
+          <div id="colorpickers">
+           <div class="colorpicker  nocolor" style="background:transparent;" original-title="Transparent"></div>
+           <div class="colorpicker rect" style="background:rgb(255,255,255);" original-title="Fill color: white"></div>
+           <div class="colorpicker rect" style="background:rgb(221,221,221);" original-title="Fill color: #ddd"></div>
+           <div class="colorpicker rect" style="background:rgb(170,170,170);" original-title="Fill color: #aaa"></div>
+           <div class="colorpicker rect" style="background:rgb(119,119,119);" original-title="Fill color: #777"></div>
+           <div class="colorpicker rect" style="background:rgb(68,68,68);" original-title="Fill color: #444"></div>
+           <div class="colorpicker rect" style="background:rgb(17,17,17);" original-title="Fill color: #111"></div>
+           <div class="colorpicker rect" style="background:tomato;" original-title="Fill color: tomato"></div>
+         </div>
+
+         <div id="bordercolors" style="display:none;">
+
+          <div class="brcolor noborder" style="border-color:transparent;" original-title="Border color: transparent"></div>
+          <div class="brcolor" style="border-color:#fff;" original-title="Border color: #fff"></div>
+          <div class="brcolor" style="border-color:#ddd;" original-title="Border color: #ddd"></div>
+          <div class="brcolor" style="border-color:#aaa;" original-title="Border color: #aaa"></div>
+          <div class="brcolor" style="border-color:#777;" original-title="Border color: #777"></div>
+          <div class="brcolor" style="border-color:#444;" original-title="Border color: #444"></div>
+          <div class="brcolor" style="border-color:#111;" original-title="Border color: #111"></div>
+          <div class="brcolor" style="border-color:tomato;" original-title="Border color: tomato"></div>
+
+        </div>
+      </div>
+
+
+    </div>
+    <!-- ///wirepanel END -->
+  
+</div>
+
+<div id="about" class="panel">
+  <a href="./pwp wireframes final_files/pwp wireframes final.html" class="closeabout"><i class="icon-remove-sign"></i></a>
+  <div class="innerpanelwrap">
+    <h2>Wireframe.cc is a minimal wireframing tool.</h2>
+    <h4>Create  super simple wireframes of websites and mobile apps. 100% free.</h4>
+    <div class="panel-inner">
+      <article>
+        <object type="image/svg+xml" data="https://wireframe.cc/images/create1.svg" width="320" height="240"></object>
+
+        <h3><i class="icon-pencil"></i>Click and drag to draw</h3>
+        <p>Creating elements of your wireframe couldn't be easier. All you have to do is draw a rectangle on the canvas and select the stencil type that will be inserted there. You can do that by <b>dragging your mouse across canvas</b> and selecting an option from a pop-up menu. If you need to edit anything just double-click it.</p>
+        <h3><i class="icon-bolt"></i>Super-minimal interface</h3>
+        <p>Instead of countless toolbars and icons that we all know from other tools and apps <i>Wireframe.cc</i> offers a clutter-free environment. You can now focus on your ideas and easily sketch them before they fade away.</p>
+
+        <h3><i class="icon-comments-alt"></i>Annotate with ease</h3>
+        <p>If you want to be sure that your message gets through you can always comment on your wireframe. Annotations are created the same way as any other objects on the canvas and they can be turned on and off.</p>
+      </article>
+      <article>
+        <object type="image/svg+xml" data="https://wireframe.cc/images/palette.svg" width="320" height="240"></object>
+        <h3><i class="icon-tint"></i>Limited palette</h3>
+        <p>If you want your wireframes to be crisp and clear you should keep them simple. <i>Wireframe.cc</i> can help you achieve that by offering a very limited palette of options. That applies to color palette and the number of stencils that you can choose from. This way the <b>essence of your idea</b> will never be lost in unnecessary decorations and fancy styles. Instead you will get a wireframe with a clarity of a hand-drawn sketch.</p>
+        <h3><i class="icon-magic"></i>Smart suggestions</h3>
+        <p><i>Wireframe.cc</i> is trying to <i>guess</i> what you intend to draw. If you started drawing a wide and thin element it is more likely to be a <i>headline</i> rather than a <i>vertical scrollbar</i> or a <i>circle</i>.Therefore, the pop-up menu will contain only icons of the elements that can take this shape.</p>
+        <p>The same goes for editing - you are presented only with options that are <b>applicable</b> for a given element. That means different icons in a toolbar for editing a paragraph and different for a simple rectangle.</p></article>
+
+
+
+        <article>
+          <object type="image/svg+xml" data="https://wireframe.cc/images/devices.svg" width="320" height="240"></object>
+          <h3><i class="icon2-mobile"></i>Wireframe websites and mobile apps</h3>
+
+          <p>You can choose from two templates: a browser window and a mobile phone. The mobile version comes in vertical and landscape orientations. To switch between the templates you can use the icon in the top left corner or simply resize the canvas using handle in its bottom right corner.</p>
+
+          <h3><i class="icon-share-alt"></i>Easy to share and modify</h3>
+          <p>Each wireframe that you save gets a <b>unique URL</b> that you can bookmark or share. You will be able to resume working on your design any time in the future.</p>
+
+          <h3>Useful tips</h3>
+          <ul>
+            <li>DOUBLECLICK - edit selected element</li>
+            <li>CTRL + C / CTRL + V - copy/paste element</li>
+            <li>ALT + drag - copy element</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <div class="bottomright">
+
+    <span class="canvassize"><b>canvas</b>: 1024/600px</span> 
+    <span class="coord"><b>X</b>: 380 <b>Y</b>: 346</span>
+    <span class="dim"><b>W</b>: 0px, <b>H</b>: 0px</span>
+  </div>
+
+
+
+<div class="grids" style="display:none;">
+<div id="gridcol">
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+<div class="col"></div>
+</div>
+<div id="grid-dot" style="width:100%;height:100%;overflow:hidden;">
+<svg id="svg-grid" zoomAndPan="disable" currentscale="2" xmlns="http://www.w3.org/2000/svg" version="1.2" width="3000" height="12000">
+
+<pattern id="dot-pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+<g id="sharp">
+<circle class="svgdot" cx="19.5" cy="19.5" r="0.5" stroke="#888" style="fill: none;"></circle>
+</g> 
+</pattern>
+<rect id="grid" fill="url(#dot-pattern)" width="3000" height="12000"></rect>
+</svg></div>
+<div id="grid-div" style="width:100%;height:100%;overflow:hidden;">
+<svg id="svg-grid" zoomAndPan="disable" currentscale="2" xmlns="http://www.w3.org/2000/svg" version="1.2" width="3000" height="12000"><pattern id="grid-pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+<g id="sharp" transform="translate(-0.5,-0.5)">
+<line class="lineH" x1="0" x2="100" y1="20" y2="20" stroke="#eee" stroke-width="1"></line>
+<line class="lineH" x1="0" x2="100" y1="40" y2="40" stroke="#eee" stroke-width="1"></line>
+<line class="lineH" x1="0" x2="100" y1="60" y2="60" stroke="#eee" stroke-width="1"></line>
+<line class="lineH" x1="0" x2="100" y1="80" y2="80" stroke="#eee" stroke-width="1"></line>
+
+<line class="lineV" x1="20" x2="20" y1="0" y2="100" stroke="#eee" stroke-width="1"></line>
+<line class="lineV" x1="40" x2="40" y1="0" y2="100" stroke="#eee" stroke-width="1"></line>
+<line class="lineV" x1="60" x2="60" y1="0" y2="100" stroke="#eee" stroke-width="1"></line>
+<line class="lineV" x1="80" x2="80" y1="0" y2="100" stroke="#eee" stroke-width="1"></line>
+
+<line class="lineV" x1="100" x2="100" y1="0" y2="100" stroke="#e1e1e1" stroke-width="1"></line>
+<line class="lineH" x1="0" x2="100" y1="100" y2="100" stroke="#e1e1e1" stroke-width="1"></line>
+</g></pattern><rect id="grid" fill="url(#grid-pattern)" width="3000" height="12000"></rect></svg></div><div id="guide-h" class="guide" style="display: none;"></div><div id="guide-v" class="guide" style="display: none;"></div></div>
+
+
+
+    <div class="introtext">
+      <i class="icon-remove-sign"></i>
+    </div>
+    <div id="introicons" data-intro="&lt;b&gt;Keyboard shortcuts - stencils&lt;/b&gt; &lt;br&gt;use for creating elements." data-position="right">
+
+      <div class="icon  " elementtype="box" original-title="" style="display: none;"></div>
+      <div class="icon  " elementtype="roundbox" original-title="" style="display: none;"></div>
+      <div class="icon" elementtype="elipse" original-title="" style="display: none;"></div>
+      <div class="icon" elementtype="image" original-title="" style="display: none;"><i class="icon-picture"></i></div>
+      <div class="icon" elementtype="paragraph" original-title="" style="display: none;"><i class="icon-align-left"></i></div>
+      <div class="icon" elementtype="list" original-title="" style="display: none;"><i class="icon-list"></i></div>
+      <div class="icon" elementtype="line_hor" original-title="" style="display: none;"></div>
+      <div class="icon" elementtype="line_vert" original-title="" style="display: none;"></div>
+      <div class="icon" elementtype="slider" original-title="" style="display: none;"></div>
+      <div class="icon" elementtype="progressbar" original-title="" style="display: none;"></div>
+
+      <div class="icon" elementtype="combobox" original-title="" style="display: none;"> <i class="icon-caret-down"></i> </div>
+      <div class="icon" elementtype="scrollh" original-title="" style="display: none;"> <i class="icon-caret-left" style="position:absolute;left:-5px;"></i> <i class="icon-caret-right" style="position:absolute;left:3px;"></i></div>
+      <div class="icon vertical highlightable" elementtype="scrollv" original-title="" style="display: none;"> <i class="icon-caret-up" style="position:absolute;top:-5px;"></i> <i class="icon-caret-down" style="position:absolute;top:3px;"></i></div>
+      <div class="icon " elementtype="headline" original-title="" style="display: none;">H</div>
+      <div class="icon " elementtype="headlinetxt" original-title="" style="display: none;">T</div>
+      <div id="textinput" class="icon  " elementtype="textinput" original-title="" style="display: none;"></div>
+      <div id="annotate" class="icon  " elementtype="annotate" style="margin-top: -2px; display: none;" original-title=""><i class="icon-comments-alt"></i></div>
+      <div class="clear"></div>
+      <!-- <span>BREIPLXXSUCQHTA</span> -->
+      <span>B</span><span>R</span><span>E</span><span>I</span><span>P</span><span>L</span><span>G</span><span>V</span><span>S</span><span>U</span><span>C</span><span>Q</span><span>Y</span><span>H</span><span>T</span><span>N</span><span>A</span>
+
+    </div>
+    <div class="introcolors" style="display:none;">
+      <div class="bgcolor-wrap" data-intro="&lt;b&gt;Keyboard shortcuts - colors&lt;/b&gt;&lt;br&gt;use for creating elements (to fill area with color) or editing elements (e.g. press &lt;i&gt;1&lt;/i&gt; to set fill color to &lt;i&gt;white&lt;/i&gt; or &lt;i&gt;CTRL+1&lt;/i&gt; to make border color &lt;i&gt;white&lt;/i&gt;" data-position="right">
+        <div class="brcolor noborder" style="border-color:transparent;" original-title=""></div>
+        <div class="brcolor" style="border-color:#fff;" original-title=""></div>
+        <div class="brcolor" style="border-color:#ddd;" original-title=""></div>
+        <div class="brcolor" style="border-color:#aaa;" original-title=""></div>
+        <div class="brcolor" style="border-color:#777;" original-title=""></div>
+        <div class="brcolor" style="border-color:#444;" original-title=""></div>
+        <div class="brcolor" style="border-color:#111;" original-title=""></div>
+        <div class="brcolor" style="border-color:tomato;" original-title=""></div>
+      </div>
+      <span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span><span>0</span>
+      <div class="dir1">
+        <svg class="dirline" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="100px" height="60px" viewBox="0 0 100 60" preserveAspectRatio="none"><line vector-effect="non-scaling-stroke" fill="none" stroke="#fff" stroke-width="2" x1="0" y1="0" x2="100" y2="60"></line></svg>
+      </div>
+      <div class="dir2" data-intro="Easier selecting &lt;span class=&quot;better&quot; &gt;Better&lt;/span&gt;" data-position="right">
+        <svg class="dirline" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="100px" height="60px" viewBox="0 0 100 60" preserveAspectRatio="none"><line vector-effect="non-scaling-stroke" fill="none" stroke="#fff" stroke-width="2" x1="0" y1="0" x2="100" y2="60"></line></svg>
+      </div>
+      
+      
+      <div class="dir3" data-intro="Draw on top of another element pressing &lt;i&gt;Shift&lt;/i&gt; &lt;span class=&quot;better&quot; &gt;Better&lt;/span&gt;" data-position="right">
+        <div class="dir4">
+          <svg class="dirline" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="100px" height="60px" viewBox="0 0 100 60" preserveAspectRatio="none"><line vector-effect="non-scaling-stroke" fill="none" stroke="#fff" stroke-width="2" x1="0" y1="0" x2="100" y2="60"></line></svg>
+        </div>
+      </div>
+    </div>
+    <div data-intro="Context menu &lt;br&gt;(just right-click) &lt;span class=&quot;intronew&quot; style=&quot;margin-left: -17px;left: 18px;position: relative;&quot;&gt;New&lt;/span&gt;" data-position="top" style="position:absolute;left:50%;top:145px;height:60px;width:160px;margin-left:60px;"></div>
+
+    <script>
+
+    var filename = 0
+    </script>
+
+
+
+    <script src="./pwp wireframes final_files/jquery.tipsy.js"></script>
+    <script src="./pwp wireframes final_files/wireframe.2.100.min.js" type="text/javascript"></script>
+    <script>
+    if (filename!==0) {InstantShowSaveButton();
+
+      MakeCanvasDrag();
+      makeDrag($('.wire'));
+      makeDrag($('.aa'));
+
+    }else{
+      $('#slogan').show();
+    }
+
+    </script>
+ 
+    <!-- Piwik -->
+    <script type="text/javascript"> 
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://wireframe.cc/piwik//";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 1]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+      g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+
+    </script>
+    <noscript>&lt;p&gt;&lt;img src="http://wireframe.cc/piwik/piwik.php?idsite=1" style="border:0" alt="" /&gt;&lt;/p&gt;</noscript>
+    <!-- End Piwik Code -->
+    <script>
+    (function() {
+      $(function() {
+        $('body').chardinJs();
+        $('.whatsnew').bind('click', function(e) {
+          e.preventDefault();
+          InstantShowSaveButton();
+          supercanvas.addClass('slide-left');
+          $(this).hide();
+          $('.wire').hide();
+          wirepanel.hide();
+          $('.introtext , #introicons , .copypaste , .introcolors').show();
+          $('#introicons icon').show();
+          // _paq.push(['trackGoal', 3]);
+          return ($('body').data('chardinJs')).toggle();
+
+        });
+        return $('body').bind('chardinJs:stop', function() {
+          $('.whatsnew, .wire').show();
+          supercanvas.removeClass('slide-left');
+          $('.introtext , #introicons , .introcolors').hide();
+
+        });
+      });
+      $('.introtext').click(function () {
+        $('body').chardinJs('stop');
+      });
+    }).call(this);
+
+    //amplitude start
+    
+    amplitude.logEvent("Free: Main page visited", {'Name': filename ? filename : 'blank'});
+    $('#watch-demo').click(function () {
+      amplitude.logEvent("Free: Demo watched");
+    });
+    $('#about').click(function () {
+      amplitude.logEvent("Free: About page displayed");
+    });
+
+    $('#savefree').click(function () {
+      amplitude.logEvent("Free: Project saved", {'Name': filename});
+    });
+    //amplitude stop
+
+
+    </script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","licenseKey":"1706871187","applicationID":"4829587","transactionName":"NVEBYEEFDRIEAUxRXgwbNkZaSwoPAQdAFkEKRA==","queueTime":0,"applicationTime":10,"ttGuid":"","agentToken":"","atts":"GRYCFgkfHhw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+  <script src="https://js-agent.newrelic.com/nr-476.min.js"></script></body></html>

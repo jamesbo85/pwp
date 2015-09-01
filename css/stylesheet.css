@@ -1,13 +1,62 @@
-header{
-	display: block;
-	background: rgba(4, 10, 64, 0.5);
+@font-face {
+	font-family: Bebas Neue;
+	src: url(../fonts/Bebas_Neue.woff);
+	font-weight: normal; }
+
+.overflow-hidden {
+	overflow: hidden; }
+
+body {
+	background-color: white; }
+
+.page1 {
+	height: 75%; }
+
+.iam {
 	text-align: center;
-	color: rgb(19, 32, 255);
-}
-.pwpbackgroundpattern {
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-image: url("../images/granitebg.jpg");
-	background-size: cover;
-	background-attachment: fixed;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 7.5rem;
+	padding-top: 22.5vh;
+	color: #343838; }
+
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 1.25s infinite;
+	-moz-animation: blink 1.25s infinite;
+	animation: blink 1.25s infinite;
+	color: #00b2f0; }
+
+@keyframes blink {
+	0% {
+		opacity: 1; }
+
+	50% {
+		opacity: 0; }
+
+	100% {
+		opacity: 1; } }
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1; }
+
+	50% {
+		opacity: 0; }
+
+	100% {
+		opacity: 1; } }
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1; }
+
+	50% {
+		opacity: 0; }
+
+	100% {
+		opacity: 1; } }
+
+@media all and (max-width: 520px) {
+	.iam {
+		padding-top: 5vh; }
 }

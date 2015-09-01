@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-		<title>Personal Website Project</title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<!-- Bootstrap Latest compiled and minified CSS -->
+		<link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Optional Bootstrap theme -->
+		<link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+				rel="stylesheet"/>
+
+		<!-- ////////////////////////////////////////////////
+		//// LINK TO YOUR CUSTOM CSS FILES HERE
+		//// <link type="text/css" href="css/style.css" rel="stylesheet"/>
+		///////////////////////////////////////////////////// -->
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script type="text/javascript" src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript"
+				  src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+		<script type="text/javascript"
+				  src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+		<script type="text/javascript"
+				  src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.1/additional-methods.min.js"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript, all compiled plugins included -->
+		<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/eventsassignment.js"></script>
+		<link type="text/css" href="css/style.css" rel="stylesheet" />
+		<title>James Huber</title>
+
 	</head>
-	<body class="pwpbackgroundpattern">
-		<div>
-			<header>
-				<h1>Personal Website Project</h1>
-			</header>
-			<main>
-				<div>
-					<h2>PURPOSE</h2>
-					<p>I would like to create a personal portfolio website which will advertise me and my coding skills to potential clients/employers</p>
+	<body>
+			<div class="page1">
+				<div class="nav-menu">
+					<div class="menu-btn no-select"></div>
+					<ul>
+						<li><a href="#portfolio">Work</a></li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#contact">Contact</a></li>
+
+					</ul>
 				</div>
-				<div>
-					<h2>AUDIENCE</h2>
-					<p>Potention clients and employers interested in getting a full view of all my web development skills, including past and future projects.</p>
+
+				<div class="iam">
+
+					Hi, I'm James. I am a
+					<br \>
+					<span class="typewriter">Web Developer</span>
+					<span class="typed-cursor">|</span>
+
 				</div>
-				<div>
-					<h2>GOAL</h2>
-					<p>The create a fully functional and elegant website which demonstrates my full array of coding skills,
-						in order to attract potential employers or freelance clients. This website will be comprehensive and
-						fully updatable with links to new or current projects and will tell a little about myself	and my philosophy
-						and goals.</p>
-				</div>
-			</main>
-		</div>
+			</div>
 	</body>
-</html>
