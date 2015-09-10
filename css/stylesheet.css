@@ -1,62 +1,81 @@
-@font-face {
-	font-family: Bebas Neue;
-	src: url(../fonts/Bebas_Neue.woff);
-	font-weight: normal; }
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-bottom: 2px solid #C0C0C0;
+	background-color: #000000;
+	margin: 0;
+	padding: 0;
+	z-index: 99;
+}
 
-.overflow-hidden {
-	overflow: hidden; }
+.navbar {
+	background-color: #000000;
+}
 
-body {
-	background-color: white; }
+.navbar-brand {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #C0C0C0;
+	padding-top: 25px;
+	padding-bottom: 3px;
+	margin: 0;
+	font-size: 40px;
+}
 
-.page1 {
-	height: 75%; }
+.dropdown-toggle{
+	background-color: #006A4E;
+	color: #C0C0C0;
+}
 
-.iam {
+.dropdown-menudropdown-menu-right{
+	background-color: #C0C0C0;
+}
+
+body{
+	background-color: #006A4E;
+}
+
+.pageheight{
+	min-height: 300px;
+}
+
+@media only screen and (min-width:992px){
+	.pageheight{
+		min-height: 700px;
+	}
+}
+
+.launchpage{
+
+}
+
+h2{
 	text-align: center;
-	font-family: 'Bebas Neue', sans-serif;
-	font-size: 7.5rem;
-	padding-top: 22.5vh;
-	color: #343838; }
+	font-size: 60px;
+	color: #C0C0C0;
+	border: 2px solid #C0C0C0;
+	padding: 10px 20px 10px 20px;
+	margin-top: 250px;
+}
 
-.typed-cursor {
-	opacity: 1;
-	-webkit-animation: blink 1.25s infinite;
-	-moz-animation: blink 1.25s infinite;
-	animation: blink 1.25s infinite;
-	color: #00b2f0; }
+h3{
+	color: #C0C0C0;
+	font-size: 25px;
+}
 
-@keyframes blink {
-	0% {
-		opacity: 1; }
+.screenshotdescript{
+	color: #C0C0C0;
+	margin-top: 50px;
+}
 
-	50% {
-		opacity: 0; }
+.resumeabout{
+	border: 3px dashed #000000;
+	padding: 215px 20px 215px 20px;
+}
 
-	100% {
-		opacity: 1; } }
-
-@-webkit-keyframes blink {
-	0% {
-		opacity: 1; }
-
-	50% {
-		opacity: 0; }
-
-	100% {
-		opacity: 1; } }
-
-@-moz-keyframes blink {
-	0% {
-		opacity: 1; }
-
-	50% {
-		opacity: 0; }
-
-	100% {
-		opacity: 1; } }
-
-@media all and (max-width: 520px) {
-	.iam {
-		padding-top: 5vh; }
+.resumeholder{
+	color: #C0C0C0;
+	font-size: 50px;
+	text-align: center;
 }
