@@ -49,7 +49,7 @@
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav"
 								  aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
-							<i class="fa fa-menu"></i>
+							<i class="fa fa-bars"></i>
 						</button>
 						<a class="navbar-brand">James Huber</a>
 					</div>
@@ -59,9 +59,12 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-									aria-expanded="false">Options<span class="caret"></span></a>
+									aria-expanded="false">
+										<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#portfolio-page">Portfolio</a></li>
+									<li><a href="#welcome">Home</a></li>
+									<li><a href="#portfolio">Portfolio</a></li>
 									<li><a href="#aboutme-page">About James</a></li>
 									<li><a href="#contactform-page">Contact James</a></li>
 								</ul>
@@ -73,41 +76,65 @@
 				<!-- /.container-fluid -->
 			</nav>
 		</header>
-		<div class="pageheight">
-			<div class="container" id="launchpage">
+		<div class="pageheight" id="welcome">
+			<div class="container">
 				<div class="row" id="launchpage">
 					<div class="col-md-1"></div>
 					<div class="col-md-10">
-						<h2>Welcome to James Huber's<br>Portfolio Website</h2>
+						<h1>Welcome to James Huber's<br>Portfolio Website</h1>
 					</div>
 					<div class="col-md-1"></div>
 				</div>
 			</div>
 		</div>
-		<div class="pageheight">
-			<div class="container" id="portfolio-page">
+		<div class="pageheight" id="portfolio">
+			<div class="container" id="screenholder">
+				<h2>Current and On Going Projects</h2>
+
 				<div class="row">
-					<div class="col-md-4">
-						<h3>Punctuality App</h3>
-						<img src="/images/punctappthumb.png" alt="punct app screen shot">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="/images/punctappthumb.png" alt="punct app screen shot">
+
+							<div class="caption">
+								<h3>Punctuality App</h3>
+
+								<p class="screenshotdescript">Punctuality app is a project, which aims to dynamically track
+									users and bring together calender
+									APIs with Google Maps APIs in order to keep users on time and notify other family members and
+									friends if they will not be on time.</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-2">
-						<p class="screenshotdescript">Punctuality app is a project, which aims to dynamically track users and bring together calender
-						APIs with Google Maps APIs in order to keep users on time and notify other family members and friends if they will not be on time.</p>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="/images/invtextscreenthumb200.png" alt="invtext screen shot">
+
+							<div class="caption">
+								<h3>Inventory TEXT</h3>
+
+								<p class="screenshotdescript">Inventory managment software, tailored towards small businesses.
+									Built using PHP, Angular, HTML,
+									CSS3, Bootstrap. Also includes Swift Mailer, Chrontab, and manually build APIs</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<h3>Inventory TEXT</h3>
-						<img src="/images/invtextscreenthumb200.png" alt="invtext screen shot">
-					</div>
-					<div class="col-md-2">
-						<p class="screenshotdescript">Inventory managment software, tailored towards small businesses. Built using PHP, Angular, HTML,
-							CSS3,	Bootstrap. Also includes Swift Mailer, Chrontab, and manually build APIs</p>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="/images/comingsoon.jpg" alt="future project">
+
+							<div class="caption">
+								<h3>Future Project</h3>
+								<p> Coming soon, I promise!</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="pageheight">
 			<div class="container" id="aboutme-page">
+				<h4>About Me</h4>
 				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="resumeabout col-md-6">
